@@ -6,7 +6,7 @@
   "author": "George Papadakis",
   "scripts": {
     "start": "node server/server.js",
-    "deploy": "webpack -p --config webpack.production.config.js",
+    "deploy": "webpack -p --config webpack.production.config.js --json > stats.json",
     "watch": "webpack --watch"
   },
   "keywords": [

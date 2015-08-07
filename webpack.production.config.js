@@ -10,10 +10,10 @@ var config = {
     filename: 'bundle.js'
   },
   module: {
-    loaders : [
+    loaders: [
       {
         test: /\.css$/,
-        loader:  ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader"),
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader"),
         include: path.join(__dirname, 'src')
       },
       {
@@ -28,6 +28,11 @@ var config = {
       }
     ]
   },
+
+  externals: {
+    'react': 'React'
+  },
+
   plugins: [
     new ExtractTextPlugin('app.css', { allChunks: true }),
     new webpack.optimize.UglifyJsPlugin(),
