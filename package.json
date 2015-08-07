@@ -1,0 +1,49 @@
+{
+  "name": "YARR",
+  "version": "1.0.0",
+  "description": "Yet another React rater",
+  "main": "app/app.js",
+  "author": "George Papadakis",
+  "scripts": {
+    "start": "node server/server.js",
+    "deploy": "webpack -p --config webpack.production.config.js",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "babel-core": "^5.7.4",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.12",
+    "classnames": "^2.1.3",
+    "css-loader": "^0.15.5",
+    "cssnext-loader": "^1.0.1",
+    "express": "^4.13.1",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "html-webpack-plugin": "^1.6.0",
+    "http-proxy": "^1.11.1",
+    "lodash": "^3.10.1",
+    "node-libs-browser": "^0.5.2",
+    "open": "0.0.5",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.8",
+    "react-redux": "^0.2.2",
+    "redux": "^0.12.0",
+    "redux-thunk": "^0.1.0",
+    "style-loader": "^0.12.3",
+    "stylus-loader": "^1.2.1",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not yet"
+  },
+  "dependencies": {
+    "redux": "^1.0.0-rc"
+  }
+}
