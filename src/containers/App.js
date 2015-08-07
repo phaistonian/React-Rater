@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from '../components/Item';
-import range from 'lodash/array/utility';
+import range from 'lodash/utility/range';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as appActions from '../actions/appActions';
