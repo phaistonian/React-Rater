@@ -1,3 +1,10 @@
+@import("vars.styl");
+
+body {
+  background $bgColor
+}
+
+
 div {
   margin: 20px;
   clear: both;
@@ -10,9 +17,9 @@ div {
 }
 
 .rater li {
-  padding: 50px;
+  padding: $padding;
   font-size: 20px;
-  background: #eee;
+  background: lighten($bgColor, 20);
   display: inline-block;
   transition: .5s;
   margin: 0;

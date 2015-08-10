@@ -18,10 +18,12 @@ export default class Item extends Component {
   }
 
   handleClick () {
+    alert('ena')
     this.props.select(this.props.index);
   }
 
   render () {
+    console.log(this.props);
     return <li
       className={classnames({
         'rater-hover': this.props.hovered >= this.props.index
@@ -29,6 +31,7 @@ export default class Item extends Component {
       onMouseOver={::this.handleMouseOver}
       onMouseOut={::this.handleMouseOut}
       onClick={::this.handleClick}>
+      {this.props.index}
       </li>;
   }
 }

@@ -6,7 +6,7 @@ const displaySelected = (() => {
   document.body.appendChild(e);
 
   return (selected) => {
-    e.innerHTML = `${selected} is selected`;
+    e.innerHTML = `${selected}<br />is selected`;
   };
 }());
 
@@ -16,4 +16,3 @@ for (let i = 0; i < 10; i++ ) {
   document.body.appendChild(e);
   React.render(<Rater onSelect={displaySelected} />, e);
 }
-//React.render(<Rater onSelect={window::window.alert} />, document.body);

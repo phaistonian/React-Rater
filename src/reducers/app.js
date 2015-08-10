@@ -1,4 +1,4 @@
-import { SELECT, HOVER } from '../constants/app.js';
+import { SELECT, HOVER } from '../constants/ActionTypes.js';
 
 const initialState = {
   selected: null,

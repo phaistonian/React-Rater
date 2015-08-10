@@ -3,11 +3,13 @@ import Item from '../components/Item';
 import range from 'lodash/utility/range';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as appActions from '../actions/appActions';
+import * as appActions from '../actions/AppActions';
 
 import '../index.styl';
 
-@connect(state => state)
+// https://github.com/gaearon/react-redux#inject-todos-and-all-action-creators-addtodo-completetodo--as-actions
+//@connect(state => state, appActions)
+@connect(state => state, dispatch => ({ actions: bindActionCreators(appActions, dispatch) }) )
 export default class App extends Component {
 
   componentWillReceiveProps (nextProps) {
@@ -21,12 +23,11 @@ export default class App extends Component {
   }
 
   render () {
-    const actions = bindActionCreators(appActions, this.props.dispatch);
     return (
       <ol className="rater">
-        {range(5)
+        {range(8)
           .map((index) => <Item
-            {...actions}
+            {...this.props.actions}
             selected={this.props.selected}
             hovered={this.props.hovered}
             index={index + 1}
